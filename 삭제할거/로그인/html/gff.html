@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Login</title>
+<style>
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:#fafafa;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans KR",sans-serif;
+  }
+  .page{
+    max-width: 980px; 
+    margin: 0 auto; 
+    padding: 40px 16px;
+    min-height: 100vh; 
+    display:grid; 
+    place-items:center;
+  }
+  .wrap{
+    width:100%; 
+    display:flex; 
+    gap:56px; 
+    align-items:center; 
+    justify-content:center;
+  }
+
+  /* 왼쪽: 겹쳐진 카드 묶음(이미지) */
+  .left{
+    position:relative; 
+    width: 420px; 
+    height: 520px;
+  }
+  .left>.left-imagebox {
+    width: 420px; 
+    height: 520px;
+  }
+  .stack{
+    position:absolute; 
+    inset:0;
+  }
+  /* 오른쪽: 폼 박스 */
+  .right{ width:350px;
+   }
+  .logo{ 
+    font-size: 42px; 
+    font-weight:700; 
+    font-style: italic; 
+    text-align:center; 
+    margin-bottom:20px; 
+  }
+  .panel{
+    background:#fff; 
+    border:1px solid #dbdbdb; 
+    border-radius:8px; 
+    padding: 24px 26px; 
+  }
+  .field{
+    margin-bottom:10px; 
+  }
+  input{
+    width:100%; 
+    height:38px; 
+    border:1px solid #dbdbdb; 
+    border-radius:4px;
+    padding:0 10px; 
+    background:#fafafa;
+  }
+  .btn{
+    width:100%;
+    height:32px; 
+    border:none; 
+    border-radius:8px; 
+    margin-top:8px;
+    background:#4f65ff; 
+    color:#fff; 
+    font-weight:600; 
+    cursor:pointer;
+  }
+  .divider{
+    display:flex; 
+    align-items:center; 
+    gap:12px; 
+    margin:14px 0;
+  }
+  .divider::before,.divider::after{
+    content:""; 
+    flex:1; 
+    height:1px; 
+    background:#dbdbdb;
+  }
+  .sublink{
+    text-align:center; 
+    font-size:14px; 
+    margin-top:12px; 
+  }
+  .sublink a{
+     color:#385185; 
+     text-decoration:none; 
+    }
+  .small{ color:#737373; 
+    font-size:12px; 
+    text-align:center; 
+    margin-top:10px; }
+  .join{
+    margin-top:12px; 
+    padding:16px;
+     border:1px solid #dbdbdb; 
+     border-radius:8px; 
+     background:#fff; 
+     text-align:center;
+  }
+  .join a{ 
+    color:#0095f6; 
+    text-decoration:none; 
+    font-weight:600; }
+
+
+  /* 반응형: 좁아지면 세로 스택 */
+  @media (max-width: 900px){
+    .wrap{ flex-direction:column; gap:24px; }
+    .left{ width: 330px; height: 420px; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <div class="wrap">
+      <!-- 왼쪽 이미지 영역 -->
+      <div class="left" aria-hidden="true">
+        <div class="left-imagebox">
+          <img src="" alt="메인이미지">
+
+        </div>
+      </div>
+
+      <!-- 오른쪽 폼 영역 -->
+      <div class="right">
+        <div class="logo"><img src="" alt="로고"></div>
+        <div class="panel">
+          <div class="field">
+            <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
+          </div>
+          <div class="field">
+            <input type="password" placeholder="비밀번호" />
+          </div>
+          <button class="btn">로그인</button>
+
+          <div class="divider"><span>또는</span></div>
+          <div class="sublink">
+            <a href="javascript:void(0)">Facebook으로 로그인</a>
+          </div>
+          <div class="small"><a href="javascript:void(0)" style="color:#00376b; text-decoration:none;">비밀번호를 잊으셨나요?</a></div>
+        </div>
+
+        <div class="join">
+          계정이 없으신가요? <a href="#">가입하기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
