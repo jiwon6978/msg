@@ -1,7 +1,8 @@
-        a{
+        a {
             text-decoration: none;
             /* color:rgb(161,161,161); */
         }
+
         body {
             /* background-color: #000; */
             display: flex;
@@ -24,7 +25,7 @@
 
         .logo {
             /* font-family: 'Brush Script MT', cursive; */
-            color: rgb(171,23,179);
+            color: rgb(171, 23, 179);
             font-weight: 700;
             font-size: 50px;
             margin-bottom: 10px;
@@ -37,8 +38,8 @@
         }
 
         .btn-google {
-            background-color: rgb(252,249,244);
-            color:rgb(161,161,161);
+            background: #989898;
+            color: rgb(161, 161, 161);
             border: none;
             width: 100%;
             padding: 10px;
@@ -47,8 +48,9 @@
             border-radius: 10px;
             cursor: pointer;
         }
+
         .btn-google>a {
-             color:rgb(161,161,161);
+            color: white;
         }
 
         .divider {
@@ -93,7 +95,7 @@
         }
 
         .submit-btn {
-            background-color: rgb(252,249,244);
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
             color: #fff;
             border-radius: 10px;
             border: none;
@@ -104,22 +106,72 @@
             margin-top: 10px;
             margin-bottom: 10px;
         }
-        .submit-btn>a{
-            color:rgb(161,161,161);
+
+        .submit-btn>a {
+            color: white;
+            font-weight: bolder;
+            font-size: large;
         }
 
         .login-btn2 {
-            color:#444;
-            width:100%;
-            padding:15px;
-            margin-top:30px;
-            border:none;
-            background-color: rgb(252,249,244);
+            /* color: #444; */
+            width: 100%;
+            padding: 15px;
+            margin-top: 30px;
+            border: none;
+            background-color: #989898;
             border-radius: 10px;
-            color:white;
-            font-weight:bolder;
+            color: white;
+            font-weight: bolder;
             cursor: pointer;
         }
+
         .login-btn2>a {
-            color:rgb(161,161,161);
+            color: white;
+        }
+
+        /* 가입버튼 BS5시작 */
+        .btn-3d {
+            position: relative;
+            display: inline-block;
+            padding: .7em .2em;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            color: white;
+            width:100%;
+            
+        }
+
+        .btn-3d::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            border-radius: 4px;
+            transition: box-shadow .5s ease, transform .2s ease;
+            will-change: transform;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+            transform:
+                translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0)) translateZ(var(--tz, -12px));
+        }
+
+        .btn-3d:hover::before {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+        }
+
+        .btn-3d::after {
+            position: relative;
+            display: inline-block;
+            content: attr(data-title);
+            transition: transform .2s ease;
+            font-weight: bold;
+            letter-spacing: .01em;
+            will-change: transform;
+            transform:
+                translateY(var(--ty, 0)) rotateX(var(--rx, 0)) rotateY(var(--ry, 0));
         }
